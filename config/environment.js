@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
   ENV.rootURL = '/trail-tracker-client';
   ENV.locationType = 'hash';
-  ENV.apiHost = 'https://trail-tracker-api.herokuapp.com/';
+  ENV.apiHost = '<% https://trail-tracker-api.herokuapp.com/ %>';
   }
 
   return ENV;
