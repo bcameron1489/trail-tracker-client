@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'trail-tracker-client.ember-auth',
+    modulePrefix: 'trail-tracker-client',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -39,7 +39,7 @@ module.exports = function (environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootUrl = '/trail-tracker-client';
+    ENV.rootUrl = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -50,7 +50,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
+  ENV.rootURL = '/trail-tracker-client';
+  ENV.locationType = 'hash';
+  ENV.apiHost = 'https://trail-tracker-api.herokuapp.com/';
   }
 
   return ENV;

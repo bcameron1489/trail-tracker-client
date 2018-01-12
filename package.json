@@ -1,5 +1,5 @@
 {
-  "name": "trail-tracker-client.ember-auth",
+  "name": "trail-tracker-client",
   "version": "0.0.0",
   "description": "ember auth training",
   "private": true,
