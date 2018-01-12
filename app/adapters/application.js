@@ -1,4 +1,4 @@
-import ENV from 'ga-wdi-boston.ember-auth/config/environment';
+import ENV from 'trail-tracker-client.ember-auth/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 
 import Ember from 'ember';

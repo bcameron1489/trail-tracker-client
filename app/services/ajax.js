@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
 
-import ENV from 'ga-wdi-boston.ember-auth/config/environment';
+import ENV from 'trail-tracker-client.ember-auth/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,
