@@ -35,7 +35,7 @@ export default Ember.Service.extend({
   },
 
   changePassword (passwords) {
-    return this.get('ajax').patch(`/change-password/${this.get('credentials.id')}`, {
+    return this.get('ajax').patch(`/change-password`, {
       data: {
         passwords: {
           old: passwords.previous,
@@ -46,7 +46,7 @@ export default Ember.Service.extend({
   },
 
   signOut () {
-    return this.get('ajax').del(`/sign-out/${this.get('credentials.id')}`)
+    return this.get('ajax').del(`/sign-out`)
     .finally(() => this.get('credentials').reset());
   },
 });

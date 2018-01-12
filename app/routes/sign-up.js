@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   model () {
-    return RSVP.Promise.resolve({})
+    return RSVP.Promise.resolve({});
   },
 
   actions: {
