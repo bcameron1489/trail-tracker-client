@@ -1,7 +1,11 @@
 <h3>Hi This is my view</h3>
 
+{{log "model is " model}}
+
 {{#each model as |trail|}}
 
-<h1>{{trail.name}}</h1>
+   {{log "trail is " trail}}
+
+    <h1>{{trail.name}}</h1>
 
 {{/each}}
