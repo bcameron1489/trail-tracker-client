@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model () {
-      return this.get('store').findAll('list');
-    }
+  model (data) {
+    return this.get('store').findAll('trail');
+  }
 });
