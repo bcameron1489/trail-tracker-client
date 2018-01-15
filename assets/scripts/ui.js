@@ -33,11 +33,23 @@ const onSignOutFailure = function (data) {
   console.log('sign out failure')
 }
 
+const onChangePasswordSuccess = function () {
+  console.log('succeeded to change pw')
+  $('.input').val('')
+}
+
+const onChangePasswordFailure = function () {
+  console.log('failed to change pw')
+  $('.input').val('')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onChangePasswordSuccess,
+  onChangePasswordFailure
 }

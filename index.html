@@ -31,11 +31,18 @@
             </fieldset>
           </form>
         </div>
-        <form id="sign-out">
+        <form id="sign-out" class="post-login-auth">
           <fieldset>
             <input type="submit" name="submit" value="Sign out!">
           </fieldset>
         </form>
+        <form id="change-password" class="post-login-auth">
+        <fieldset>
+          <input type="submit" name="submit" value="Change Password!">
+          <input type="text" name="passwords[old]" class="input" placeholder="Old Password">
+          <input type="password" name="passwords[new]" class="input" placeholder="New Password">
+        </fieldset>
+      </form>
        </div>
       </header>
       <div class="trails-index-wrapper">
