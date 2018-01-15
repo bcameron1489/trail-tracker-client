@@ -20,13 +20,14 @@ const updateTrailSuccess = function (data) {
   console.log('great success patch')
   const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.content').append(showTrackers)
+  store.tracker = data.tracker
   store.data = data.user
 }
 
 const updateTrailFailure = function (data) {
   $('.input').val('')
   $('.update-alert').text('Failed To Update')
-  store.fantasy = data.fantasy
+  store.tracker = data.tracker
 }
 
 module.exports = {

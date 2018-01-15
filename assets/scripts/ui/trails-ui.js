@@ -17,6 +17,7 @@ const onGetTrailsFailure = function (data) {
 const postTrailSuccess = function (data) {
   console.log('successfully created tracker')
   store.data = data.user
+  store.tracker = data.tracker
 }
 
 const postTrailFailure = function (data) {
