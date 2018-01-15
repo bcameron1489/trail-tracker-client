@@ -1,6 +1,6 @@
 'use strict'
 const trailsIndex = require('../templates/trails-index.hbs')
-// const store = require('../store')
+const store = require('../store')
 
 const onGetTrailsSuccess = function (data) {
   console.log('successfully retreived trails')
@@ -13,7 +13,18 @@ const onGetTrailsFailure = function (data) {
   console.log('failed to retreive trails')
 }
 
+const postTrailSuccess = function (data) {
+  console.log('successfully created tracker')
+  store.data = data.user
+}
+
+const postTrailFailure = function (data) {
+  console.log('post failure')
+}
+
 module.exports = {
   onGetTrailsSuccess,
-  onGetTrailsFailure
+  onGetTrailsFailure,
+  postTrailSuccess,
+  postTrailFailure
 }

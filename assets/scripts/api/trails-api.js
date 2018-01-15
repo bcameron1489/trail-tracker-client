@@ -13,6 +13,18 @@ const getTrails = function () {
   })
 }
 
+const postTrail = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/trackers',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
-  getTrails
+  getTrails,
+  postTrail
 }

@@ -2,7 +2,9 @@
 
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('../api/trails-api.js')
+const trackApi = require('../api/trackers-api.js')
 const ui = require('../ui/trails-ui.js')
+const trackUi = require('../ui/trails-ui.js')
 
 const onGetTrails = function (event) {
   event.preventDefault()
@@ -12,11 +14,23 @@ const onGetTrails = function (event) {
     .catch(ui.onGetTrailsFailure)
 }
 
+const onPostTrail = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  api.postTrail(data)
+    .then(ui.postTrailSuccess)
+    .then(trackApi.trackerIndex)
+    .then(trackUi.onGetTrackersSuccess)
+    .catch(ui.postTrailFailure)
+}
+
 const addTrailHandlers = () => {
   $('#get-trails').on('submit', onGetTrails)
+  $('.content').on('submit', '.create-tracker', onPostTrail)
 }
 
 module.exports = {
   onGetTrails,
+  onPostTrail,
   addTrailHandlers
 }

@@ -7,8 +7,8 @@ const ui = require('../ui/trackers-ui.js')
 const onTrackerIndex = function (event) {
   event.preventDefault()
   api.trackerIndex()
-    .then(ui.success)
-    .catch(ui.failure)
+    .then(ui.onGetTrackersSuccess)
+    .catch(ui.onGetTrackersFailure)
 }
 
 const addTrackerHandlers = () => {
