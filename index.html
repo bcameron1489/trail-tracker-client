@@ -13,23 +13,30 @@
     </head>
     <body class="container-fluid">
       <header>
-      <div class='auth-wrapper'>
-        <form id="sign-up" class="auth-forms">
+       <div class="all-auth">
+        <div class='auth-wrapper'>
+          <form id="sign-up" class="auth-forms">
+            <fieldset>
+              <input type="submit" name="submit" value="Sign up!">
+              <input name="credentials[email]" type="text" class="signup" placeholder="EMAIL">
+              <input name="credentials[password]" type="password" class="signup" placeholder="PASSWORD">
+              <input name="credentials[password_confirmation]" type="password" class="signup" placeholder="PASSWORD_CONFIRMATION">
+            </fieldset>
+          </form>
+          <form id="sign-in" class="auth-forms">
+            <fieldset>
+              <input type="submit" name="submit" value="Sign in! ">
+              <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
+              <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
+            </fieldset>
+          </form>
+        </div>
+        <form id="sign-out">
           <fieldset>
-            <input type="submit" name="submit" value="Sign up!">
-            <input name="credentials[email]" type="text" class="signup" placeholder="EMAIL">
-            <input name="credentials[password]" type="password" class="signup" placeholder="PASSWORD">
-            <input name="credentials[password_confirmation]" type="password" class="signup" placeholder="PASSWORD_CONFIRMATION">
+            <input type="submit" name="submit" value="Sign out!">
           </fieldset>
         </form>
-        <form id="sign-in" class="auth-forms">
-          <fieldset>
-            <input type="submit" name="submit" value="Sign in! ">
-            <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
-            <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
-          </fieldset>
-        </form>
-      </div>
+       </div>
       </header>
       <div class="trails-index-wrapper">
         <form id="get-trails" class="trail-forms">
@@ -40,5 +47,4 @@
       </div>
       <div class="content">
       </div>
-
 </html>

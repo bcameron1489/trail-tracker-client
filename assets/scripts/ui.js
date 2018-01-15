@@ -14,6 +14,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (data) {
   console.log('signin success')
   $('.input').val('')
+  $('.content').show()
   store.user = data.user
 }
 
@@ -22,9 +23,21 @@ const onSignInFailure = function (data) {
   $('.input').val('')
 }
 
+const onSignOutSuccess = function (data) {
+  console.log('sign out success')
+  $('.input').val('')
+  $('.content').hide()
+}
+
+const onSignOutFailure = function (data) {
+  console.log('sign out failure')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignInFailure
+  onSignInFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
