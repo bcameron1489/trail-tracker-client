@@ -1,0 +1,10 @@
+{{#each trackers as |tracker|}}
+
+  <ul class="tracker-forms" data-id="{{tracker.id}}">
+    <div> Fantasy_Id: {{tracker.id}} </div>
+    <div> Player_Id: {{tracker.trail_id}} </div>
+    <div> Name: {{tracker.trail.name}} </div>
+    <div> Difficult: {{tracker.trail.difficulty}} </div>
+    <div> Rating: {{tracker.trail.rating}} </div>
+    <div> Completed: {{tracker.completed}} </div>
+{{/each}}
