@@ -7,6 +7,7 @@ const onGetTrailsSuccess = function (data) {
   const showTrails = trailsIndex({ trails: data.trails })
   $('.content').html('')
   $('.content').append(showTrails)
+  store.data = data.trails
 }
 
 const onGetTrailsFailure = function (data) {
