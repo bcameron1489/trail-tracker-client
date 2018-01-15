@@ -12,12 +12,18 @@
           <fieldset>
             <input class="completed-button" type ="submit" name="submit" data-id="{{tracker.id}}" value="completed"></input>
             <input class="id-value" name='tracker[id]' value="{{tracker.id}}" type='hidden'>
-            <input class="id-value" name="tracker[trail_id]" type="text" placeholder="trail id"></input>
+            <input class="id-value" name="tracker[trail_id]" value="{{tracker.trail_id}}" type="hidden"></input>
             <input type="text" name='tracker[completed]' class="clear-input" placeholder='completed?'>
           </fieldset>
         </form>
       </div>
      </div>
+     <div class="delete-tracker-wrapper">
+      <form class="delete-tracker">
+        <input class="delete-button" type ="submit" name="submit" data-id="{{tracker.id}}" value="Delete"></input>
+        <input class="id-value" name="id" value="{{tracker.id}}" type="hidden"></input>
+      </form>
+    </div>
   </ul>
 
 {{/each}}

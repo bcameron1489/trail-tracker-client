@@ -24,7 +24,18 @@ const updateTrail = function (data) {
   })
 }
 
+const deleteTracker = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/trackers/' + data.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   trackerIndex,
-  updateTrail
+  updateTrail,
+  deleteTracker
 }

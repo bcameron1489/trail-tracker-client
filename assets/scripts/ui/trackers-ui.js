@@ -5,8 +5,8 @@ const store = require('../store')
 
 const onGetTrackersSuccess = function (data) {
   console.log('successfully retreived trackers')
-  const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.content').html('')
+  const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.content').append(showTrackers)
 }
 
@@ -30,9 +30,20 @@ const updateTrailFailure = function (data) {
   store.tracker = data.tracker
 }
 
+const deleteTrackerSuccess = function (data) {
+  console.log('Successfully Removed Tracker')
+  $('.content').html('')
+}
+
+const deleteTrackerFailure = function (data) {
+  console.log('Failed To Remove Player')
+}
+
 module.exports = {
   onGetTrackersSuccess,
   onGetTrackersFailure,
   updateTrailSuccess,
-  updateTrailFailure
+  updateTrailFailure,
+  deleteTrackerSuccess,
+  deleteTrackerFailure
 }

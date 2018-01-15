@@ -22,13 +22,23 @@ const onUpdateTrail = function (event) {
     .catch(ui.onGetTrackersFailure)
 }
 
+const onDeleteTracker = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  api.deleteTracker(data)
+    .then(ui.deleteTrackerSuccess)
+    .catch(ui.deletePlayerFailure)
+}
+
 const addTrackerHandlers = () => {
   $('#user-trackers').on('submit', onTrackerIndex)
   $('.content').on('submit', '.patch-trail', onUpdateTrail)
+  $('.content').on('submit', '.delete-tracker', onDeleteTracker)
 }
 
 module.exports = {
   onTrackerIndex,
   onUpdateTrail,
+  onDeleteTracker,
   addTrackerHandlers
 }
