@@ -13,6 +13,18 @@ const trackerIndex = function () {
   })
 }
 
+const updateTrail = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/trackers/' + data.tracker.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
-  trackerIndex
+  trackerIndex,
+  updateTrail
 }

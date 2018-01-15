@@ -1,11 +1,23 @@
 {{#each trackers as |tracker|}}
 
   <ul class="tracker-forms" data-id="{{tracker.id}}">
-    <div> Fantasy_Id: {{tracker.id}} </div>
-    <div> Player_Id: {{tracker.trail_id}} </div>
+    <div> Tracker: {{tracker.id}} </div>
+    <div> Trail: {{tracker.trail_id}} </div>
     <div> Name: {{tracker.trail.name}} </div>
     <div> Difficult: {{tracker.trail.difficulty}} </div>
     <div> Rating: {{tracker.trail.rating}} </div>
-    <div> Completed: {{tracker.completed}} </div>
+    <div> Completed: {{tracker.completed}}
+      <div class="update-trail"
+        <form class="patch-trail">
+          <fieldset>
+            <input class="completed-button" type ="submit" name="submit" data-id="{{tracker.id}}" value="completed"></input>
+            <input class="id-value" name='tracker[id]' value="{{tracker.id}}" type='hidden'>
+            <input class="id-value" name="tracker[trail_id]" value="{{tracker.trail_id}}" type="hidden"></input>
+            <input type="checkbox" name='tracker[completed]' class="clear-input" placeholder='completed?'>
+          </fieldset>
+        </form>
+      </div>
+     </div>
   </ul>
+
 {{/each}}
