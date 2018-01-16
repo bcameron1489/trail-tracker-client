@@ -36,6 +36,13 @@ const onChangePassword = function (event) {
     .catch(ui.onChangePasswordFailure)
 }
 
+const postAuthForms = function () {
+  $('.post-auth-forms').hide()
+  $('.total-content').hide()
+}
+
+postAuthForms()
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)

@@ -1,6 +1,33 @@
 'use strict'
 const store = require('./store')
 
+// hide/show content callbacks
+
+const showContent = function () {
+  $('.total-content').show()
+}
+
+const hideContent = function () {
+  $('.total-content').hide('')
+}
+
+const preAuthContent = function () {
+  $('.auth-wrapper').hide()
+}
+
+const showPreAuthContent = function () {
+  $('.auth-wrapper').show()
+}
+
+const showPostAuth = function () {
+  $('.post-auth-forms').show()
+}
+
+const hidePostAuth = function () {
+  $('.post-auth-forms').hide()
+}
+
+// ui response
 const onSignUpSuccess = function () {
   console.log('great success')
   $('.signup').val('')
@@ -12,6 +39,9 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (data) {
+  showContent()
+  showPostAuth()
+  preAuthContent()
   console.log('signin success')
   $('.input').val('')
   $('.content').show()
@@ -26,7 +56,9 @@ const onSignInFailure = function (data) {
 const onSignOutSuccess = function (data) {
   console.log('sign out success')
   $('.input').val('')
-  $('.content').hide()
+  hideContent()
+  showPreAuthContent()
+  hidePostAuth()
 }
 
 const onSignOutFailure = function (data) {
