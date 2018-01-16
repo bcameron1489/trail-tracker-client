@@ -30,8 +30,6 @@ const onDeleteTracker = function (event) {
     .catch(ui.deletePlayerFailure)
 }
 
-
-
 const addTrackerHandlers = () => {
   $('#user-trackers').on('submit', onTrackerIndex)
   $('.content').on('submit', '.patch-trail', onUpdateTrail)
