@@ -29,12 +29,12 @@ const hidePostAuth = function () {
 
 // ui response
 const onSignUpSuccess = function () {
-  console.log('great success')
+  $('.auth-response').text('Thank you for signing up!')
   $('.signup').val('')
 }
 
 const onSignUpFailure = function () {
-  console.log('signup failure')
+  $('.auth-response').text('There was a problem. Please try again.')
   $('.signup').val('')
 }
 
@@ -42,19 +42,19 @@ const onSignInSuccess = function (data) {
   showContent()
   showPostAuth()
   preAuthContent()
-  console.log('signin success')
+  $('.auth-response').text('Welcome back ' + data.user.email + '!')
   $('.input').val('')
   $('.content').show()
   store.user = data.user
 }
 
 const onSignInFailure = function (data) {
-  console.log('signin failure')
+  $('.auth-response').text('Sign in failure. Please try again.')
   $('.input').val('')
 }
 
 const onSignOutSuccess = function (data) {
-  console.log('sign out success')
+  $('.auth-response').text('You have signed out!')
   $('.input').val('')
   hideContent()
   showPreAuthContent()
@@ -62,16 +62,16 @@ const onSignOutSuccess = function (data) {
 }
 
 const onSignOutFailure = function (data) {
-  console.log('sign out failure')
+  $('.auth-response').text('Sign out failure.')
 }
 
 const onChangePasswordSuccess = function () {
-  console.log('succeeded to change pw')
+  $('.auth-response').text('Password change successful!')
   $('.input').val('')
 }
 
 const onChangePasswordFailure = function () {
-  console.log('failed to change pw')
+  $('.auth-response').text('Failed to change password. Please try again.')
   $('.input').val('')
 }
 
