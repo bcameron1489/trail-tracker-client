@@ -7,10 +7,9 @@
         <div> Name: {{tracker.trail.name}}</div>
         <div class="mountain"> Mountain: {{tracker.trail.mountain}}</div>
         <div> Difficulty: {{tracker.trail.difficulty}}</div>
-        <button class="show-button" type="button">See Trail</button>
+        <button class="show-button" type="button"  data-mountain="{{tracker.trail.mountain}}">See Trail</button>
       </ul>
     </div>
   </div>
 </div>
-
-    {{/each}}
+{{/each}}

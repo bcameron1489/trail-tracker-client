@@ -8,7 +8,7 @@ const showContent = function () {
 }
 
 const hideContent = function () {
-  $('.total-content').hide('')
+  $('.total-content').hide()
 }
 
 const preAuthContent = function () {
