@@ -1,6 +1,9 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+.auth-wrapper {
+  color: #000;
+}
 
 .content {
   float: left;

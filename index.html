@@ -13,66 +13,73 @@
     </head>
     <body class="container-fluid">
       <header>
-        <nav class='nav-bar-wrapper'>
-          <div class="all-auth">
-            <div class='auth-wrapper'>
-              <form id="sign-up" class="auth-forms">
-                <fieldset>
-                  <input type="submit" name="submit" value="Sign up!">
-                  <input name="credentials[email]" type="text" class="signup" placeholder="EMAIL">
-                  <input name="credentials[password]" type="password" class="signup" placeholder="PASSWORD">
-                  <input name="credentials[password_confirmation]" type="password" class="signup" placeholder="PASSWORD_CONFIRMATION">
-                </fieldset>
-              </form>
-              <form id="sign-in" class="auth-forms">
-                <fieldset>
-                  <input type="submit" name="submit" value="Sign in! ">
-                  <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
-                  <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
-                </fieldset>
-              </form>
-            </div>
-            <div class="post-auth-forms">
-              <form id="sign-out" class="post-login-auth">
-                <fieldset>
-                  <input type="submit" name="submit" value="Sign out!">
-                </fieldset>
-              </form>
-              <form id="change-password" class="post-login-auth">
-                <fieldset>
-                  <input type="submit" name="submit" value="Change Password!">
-                  <input type="text" name="passwords[old]" class="input" placeholder="Old Password">
-                  <input type="password" name="passwords[new]" class="input" placeholder="New Password">
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div class="total-content">
-      <!-- forms for open read content  -->
-        <div class="trails-index-wrapper">
-          <form id="get-trails" class="trail-forms">
-            <fieldset>
-              <input type="submit" name="submit" value="show trails">
-            </fieldset>
-          </form>
-        </div>
-      <!-- forms for users content  -->
-        <div class="trackers-wrapper">
-          <div class="trackers-index">
-            <form id="user-trackers" class="tracker-forms">
+        <nav class="navbar navbar-dark bg-primary">
+          <!-- Navbar content -->
+          <div class='auth-wrapper'>
+            <form id="sign-up" class="auth-forms">
               <fieldset>
-                <input type="submit" name="submit" value="get your trackers">
+                <input type="submit" name="submit" value="Sign up!">
+                <input name="credentials[email]" type="text" class="signup" placeholder="EMAIL">
+                <input name="credentials[password]" type="password" class="signup" placeholder="PASSWORD">
+                <input name="credentials[password_confirmation]" type="password" class="signup" placeholder="PASSWORD_CONFIRMATION">
+              </fieldset>
+            </form>
+            <form id="sign-in" class="auth-forms">
+              <fieldset>
+                <input type="submit" name="submit" value="Sign in! ">
+                <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
+                <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
               </fieldset>
             </form>
           </div>
-        </div>
-      <!-- area to display open read content  -->
-        <div class="content">
-        </div>
+          <div class="post-auth-forms">
+            <form id="sign-out" class="post-login-auth">
+              <fieldset>
+                <input type="submit" name="submit" value="Sign out!">
+              </fieldset>
+            </form>
+            <form id="change-password" class="post-login-auth">
+              <fieldset>
+                <input type="submit" name="submit" value="Change Password!">
+                <input type="text" name="passwords[old]" class="input" placeholder="Old Password">
+                <input type="password" name="passwords[new]" class="input" placeholder="New Password">
+              </fieldset>
+            </form>
+          </div>
+          <form class="form-inline">
+            <button class="btn btn-outline-success view-btn home-btn" type="button">Home</button>
+            <button class="btn btn-outline-success view-btn trail-btn" type="button">Trails</button>
+          </form>
+        </nav>
+      </header>
+      <div class="home-content">
+      </div>
+      <div class="total-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-4 content">
+            <div class="trails-index-wrapper">
+              <form id="get-trails" class="trail-forms">
+                <fieldset>
+                  <input type="submit" name="submit" value="show trails">
+                </fieldset>
+              </form>
+            </div>
+          </div>
       <!-- display users content here -->
-        <div class="user-content">
+          <div class="col-xs-4 user-content">
+              <div class="trackers-index">
+                <form id="user-trackers" class="tracker-forms">
+                  <fieldset>
+                    <input type="submit" name="submit" value="get your trackers">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="user-tracker-view">
+      </div>
+    </body>
 </html>

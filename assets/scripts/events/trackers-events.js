@@ -30,10 +30,18 @@ const onDeleteTracker = function (event) {
     .catch(ui.deletePlayerFailure)
 }
 
+const userTrailsView = function (event) {
+  event.preventDefault()
+  api.trackerIndex()
+    .then(ui.userTrailsSuccess)
+    .catch(ui.userTrailsFailure)
+}
+
 const addTrackerHandlers = () => {
   $('#user-trackers').on('submit', onTrackerIndex)
-  $('.content').on('submit', '.patch-trail', onUpdateTrail)
-  $('.content').on('submit', '.delete-tracker', onDeleteTracker)
+  $('.user-content').on('submit', '.patch-trail', onUpdateTrail)
+  $('.user-content').on('submit', '.delete-tracker', onDeleteTracker)
+  $('.trail-btn').on('click', userTrailsView)
 }
 
 module.exports = {

@@ -1,0 +1,16 @@
+{{#each trackers as |tracker|}}
+
+<div class="container user-trails">
+  <div class="row">
+    <div class="col-xs-4 user-content">
+      <ul class="tracker-forms" data-id="{{tracker.id}}">
+        <div> Name: {{tracker.trail.name}}</div>
+        <div class="mountain"> Mountain: {{tracker.trail.mountain}}</div>
+        <div> Difficulty: {{tracker.trail.difficulty}}</div>
+        <button class="show-button" type="button">See Trail</button>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    {{/each}}
