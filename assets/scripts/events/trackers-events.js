@@ -27,6 +27,8 @@ const onDeleteTracker = function (event) {
   const data = getFormFields(this)
   api.deleteTracker(data)
     .then(ui.deleteTrackerSuccess)
+    .then(api.trackerIndex)
+    .then(ui.onGetTrackersSuccess)
     .catch(ui.deletePlayerFailure)
 }
 

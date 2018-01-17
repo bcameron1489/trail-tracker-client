@@ -5,7 +5,7 @@ const showUserTrails = require('../templates/display-user-content.hbs')
 const store = require('../store')
 
 const onGetTrackersSuccess = function (data) {
-  console.log('successfully retreived trackers')
+  $('.user-content').html('')
   const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.user-content').append(showTrackers)
 }
@@ -30,8 +30,7 @@ const updateTrailFailure = function (data) {
 }
 
 const deleteTrackerSuccess = function (data) {
-  console.log('Successfully Removed Tracker')
-  $('.content').html('')
+  $('.user.content').html('')
 }
 
 const deleteTrackerFailure = function (data) {
