@@ -16,13 +16,13 @@ const onGetTrackersSuccess = function (data) {
 }
 
 const onGetTrackersFailure = function () {
-  console.log('failed to retreive trackers')
+  $('.trails-response').html('Failed to retreive your trails')
 }
 
 const updateTrailSuccess = function (data) {
   $('.input').val('')
   $('.user-content').html('')
-  console.log('great success patch')
+  $('.trails-response').html('Trail updated!')
   const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.user-content').append(showTrackers)
   store.tracker = data.tracker
@@ -30,16 +30,18 @@ const updateTrailSuccess = function (data) {
 }
 
 const updateTrailFailure = function (data) {
+  $('.trails-response').html('Failed to update trail!')
   $('.input').val('')
   store.tracker = data.tracker
 }
 
 const deleteTrackerSuccess = function (data) {
+  $('.trails-response').html('Successfuly removed trail!')
   $('.user.content').html('')
 }
 
 const deleteTrackerFailure = function (data) {
-  console.log('Failed To Remove Player')
+  $('.trails-response').html('Failed to remove trail!')
 }
 
 const userTrailsSuccess = function (data) {
@@ -49,7 +51,7 @@ const userTrailsSuccess = function (data) {
     $('.user-tracker-btn').show()
     $('.user-tracker-view').html('')
     $('.user-tracker-view').show()
-    console.log('success')
+    $('.trails-response').html('View Trails!')
   } else {
     userTrailsFailure()
   }
