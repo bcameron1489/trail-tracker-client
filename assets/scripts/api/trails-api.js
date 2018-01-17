@@ -24,18 +24,18 @@ const postTrail = function (data) {
   })
 }
 
-const deleteTrail = function (data) {
-  return $.ajax({
-    url: config.apiOrigin + '/trails/' + data.id,
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
+// const deleteTrail = function (data) {
+//   return $.ajax({
+//     url: config.apiOrigin + '/trails/' + data.id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
 module.exports = {
   getTrails,
-  postTrail,
-  deleteTrail
+  postTrail
+  // deleteTrail
 }
