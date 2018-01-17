@@ -39,7 +39,7 @@ const deleteTrackerFailure = function (data) {
 
 const userTrailsSuccess = function (data) {
   const showTrails = showUserTrails({ trackers: data.trackers })
-  $('.user-tracker-view').append(showTrails)
+  $('.user-tracker-btn').append(showTrails)
   console.log('success')
 }
 

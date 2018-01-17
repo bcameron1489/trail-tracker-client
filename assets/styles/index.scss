@@ -5,6 +5,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   color: #000;
 }
 
+.breck-img {
+  margin: 100px;
+}
+
+img {
+  height: 870px;
+  width: 1619px;
+}
+
 .content {
   float: left;
   margin: 5px;
@@ -17,6 +26,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 5px;
   padding: 5px;
   width: 49%;
+}
+
+.park-img {
+  margin: 100px;
 }
 
 .post-auth-forms {

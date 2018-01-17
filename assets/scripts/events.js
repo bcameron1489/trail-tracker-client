@@ -56,10 +56,10 @@ const showHome = function () {
 
 const onShowImage = function (event) {
   if ($(event.target).attr('data-mountain') === 'Breck') {
-    $('.user-tracker-view').val()
+    $('.user-tracker-view').html('')
     $('.user-tracker-view').append(breck)
   } else if ($(event.target).attr('data-mountain') === 'Park City') {
-    $('.user-tracker-view').val()
+    $('.user-tracker-view').html('')
     $('.user-tracker-view').append(park)
   } else {
     console.log('failed or nadda')
@@ -74,7 +74,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('.home-btn').on('click', showHome)
-  $('.user-tracker-view').click('show-button', onShowImage)
+  $('.user-tracker-btn').click('show-button', onShowImage)
 }
 
 module.exports = {
