@@ -1,6 +1,18 @@
 'use strict'
 const store = require('./store')
 
+const showHome = function () {
+  $('.user-tracker-view').hide()
+  $('.user-tracker-btn').hide()
+  $('.user-tracker-view').html('')
+  $('.user-tracker-btn').html('')
+  $('.content').show()
+  $('.user-content').show()
+  $('.trail-forms').show()
+  $('.tracker-forms').show()
+  $('.auth-response').text('Check out our trails!')
+}
+
 // hide/show content callbacks
 
 const preAuthContent = function () {
@@ -44,6 +56,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (data) {
   showPostAuth()
   preAuthContent()
+  showHome()
   $('.auth-response').html('Welcome back ' + data.user.email + '!')
   $('.input').val('')
   store.user = data.user
