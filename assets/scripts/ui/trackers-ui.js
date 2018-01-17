@@ -6,7 +6,6 @@ const store = require('../store')
 
 const onGetTrackersSuccess = function (data) {
   console.log('successfully retreived trackers')
-  $('.user-content').html('')
   const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.user-content').append(showTrackers)
 }
@@ -40,7 +39,6 @@ const deleteTrackerFailure = function (data) {
 }
 
 const userTrailsSuccess = function (data) {
-  $('.total-content').html('')
   const showTrails = showUserTrails({ trackers: data.trackers })
   $('.user-tracker-view').append(showTrails)
   console.log('success')

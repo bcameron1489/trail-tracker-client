@@ -7,6 +7,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .content {
   float: left;
+  margin: 5px;
+  padding: 5px;
+  width: 49%;
+}
+
+.content-btn {
+  float: left;
+  margin: 5px;
+  padding: 5px;
   width: 49%;
 }
 
@@ -14,6 +23,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   color: #000;
 }
 
+.user-btn {
+  margin: 5px;
+  padding: 5px;
+  right: auto;
+}
+
 .user-content {
+  margin: 5px;
+  padding: 5px;
   right: auto;
 }

@@ -41,7 +41,6 @@ const onChangePassword = function (event) {
 
 const postAuthForms = function () {
   $('.post-auth-forms').hide()
-  $('.total-content').hide()
 }
 
 // const defaultView = function () {
@@ -49,23 +48,24 @@ const postAuthForms = function () {
 // }
 
 const showHome = function () {
-  $('.total-content').show()
-  $('.user-tracker-view').html('')
+  $('.home-content').append(home)
+  $('.user-tracker-view').hide()
   $('.content').show()
   $('.user-content').show()
-  home()
 }
 
 const onShowImage = function (event) {
   if ($(event.target).attr('data-mountain') === 'Breck') {
+    $('.user-tracker-view').val()
     $('.user-tracker-view').append(breck)
   } else if ($(event.target).attr('data-mountain') === 'Park City') {
+    $('.user-tracker-view').val()
     $('.user-tracker-view').append(park)
   } else {
     console.log('failed or nadda')
   }
 }
-// defaultView()
+
 postAuthForms()
 
 const addHandlers = () => {
@@ -74,7 +74,6 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('.home-btn').on('click', showHome)
-  // conditional to show trail image view
   $('.user-tracker-view').click('show-button', onShowImage)
 }
 

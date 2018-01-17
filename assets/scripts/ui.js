@@ -3,14 +3,6 @@ const store = require('./store')
 
 // hide/show content callbacks
 
-const showContent = function () {
-  $('.total-content').show()
-}
-
-const hideContent = function () {
-  $('.total-content').hide()
-}
-
 const preAuthContent = function () {
   $('.auth-wrapper').hide()
 }
@@ -39,7 +31,6 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (data) {
-  showContent()
   showPostAuth()
   preAuthContent()
   $('.auth-response').text('Welcome back ' + data.user.email + '!')
@@ -54,9 +45,10 @@ const onSignInFailure = function (data) {
 }
 
 const onSignOutSuccess = function (data) {
+  $('.content').html('')
+  $('.user-content').html('')
   $('.auth-response').text('You have signed out!')
   $('.input').val('')
-  hideContent()
   showPreAuthContent()
   hidePostAuth()
 }
