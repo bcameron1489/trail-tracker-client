@@ -4,6 +4,15 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('../api/trackers-api.js')
 const ui = require('../ui/trackers-ui.js')
 
+const clearContent = function () {
+  $('.user-tracker-view').html('')
+  $('.user-tracker-view').show()
+  $('.content').hide()
+  $('.user-content').hide()
+  $('.trail-forms').hide()
+  $('.tracker-forms').hide()
+}
+
 const onTrackerIndex = function (event) {
   event.preventDefault()
   api.trackerIndex()
@@ -35,6 +44,7 @@ const onDeleteTracker = function (event) {
 const userTrailsView = function (event) {
   event.preventDefault()
   api.trackerIndex()
+    .then(clearContent())
     .then(ui.userTrailsSuccess)
     .catch(ui.userTrailsFailure)
 }

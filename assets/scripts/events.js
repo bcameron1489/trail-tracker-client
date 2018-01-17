@@ -48,10 +48,11 @@ const postAuthForms = function () {
 // }
 
 const showHome = function () {
-  $('.home-content').append(home)
   $('.user-tracker-view').hide()
   $('.content').show()
   $('.user-content').show()
+  $('.trail-forms').show()
+  $('.tracker-forms').show()
 }
 
 const onShowImage = function (event) {
