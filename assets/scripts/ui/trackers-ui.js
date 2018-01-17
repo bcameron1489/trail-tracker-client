@@ -5,12 +5,13 @@ const showUserTrails = require('../templates/display-user-content.hbs')
 const store = require('../store')
 
 const onGetTrackersSuccess = function (data) {
+  const showTrackers = trackersIndex({ trackers: data.trackers })
+  $('.user-content').html('')
+  $('.user-content').append(showTrackers)
   if (data.trackers.length > 0) {
-    $('.user-content').html('')
-    const showTrackers = trackersIndex({ trackers: data.trackers })
-    $('.user-content').append(showTrackers)
+    $('.trails-response').html('Successfully retreived trackers')
   } else {
-    return $('.auth-response').text('You have no trails yet!')
+    $('.trails-response').html('You have no trackers')
   }
 }
 

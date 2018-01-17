@@ -3,7 +3,7 @@ const trailsIndex = require('../templates/trails-index.hbs')
 const store = require('../store')
 
 const onGetTrailsSuccess = function (data) {
-  console.log('successfully retreived trails')
+  $('.trails-response').html('Successfully retreived trails!')
   const showTrails = trailsIndex({ trails: data.trails })
   $('.content').html('')
   $('.content').append(showTrails)
@@ -11,17 +11,17 @@ const onGetTrailsSuccess = function (data) {
 }
 
 const onGetTrailsFailure = function (data) {
-  console.log('failed to retreive trails')
+  $('.trails-response').html('Failed to retreive trails')
 }
 
 const postTrailSuccess = function (data) {
-  console.log('successfully created tracker')
+  $('.trails-response').html('Trail has been added!')
   store.data = data.user
   store.tracker = data.tracker
 }
 
 const postTrailFailure = function (data) {
-  console.log('post failure')
+  $('.trails-response').html('Failed to add trail')
 }
 
 module.exports = {
