@@ -3,7 +3,6 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-const home = require('./templates/home-view.hbs')
 const breck = require('./templates/Breck-map.hbs')
 const park = require('./templates/park-city-map.hbs')
 
