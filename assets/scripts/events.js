@@ -3,6 +3,8 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const apiTrails = require('./api/trails-api.js')
+const uiTrails = require('./ui/trails-ui.js')
 const breck = require('./templates/Breck-map.hbs')
 const park = require('./templates/park-city-map.hbs')
 
@@ -19,6 +21,8 @@ const onSignIn = function (event) {
   event.preventDefault()
   api.signIn(data)
     .then(ui.onSignInSuccess)
+    .then(apiTrails.getTrails)
+    .then(uiTrails.onGetTrailsSuccess)
     .catch(ui.onSignInFailure)
 }
 
@@ -38,7 +42,12 @@ const onChangePassword = function (event) {
     .catch(ui.onChangePasswordFailure)
 }
 
-const postAuthForms = function () {
+const loginView = function () {
+  $('.content-btn').hide()
+  $('.user-button').hide()
+}
+
+const hidePostAuthForms = function () {
   $('.post-auth-forms').hide()
 }
 
@@ -48,10 +57,14 @@ const postAuthForms = function () {
 
 const showHome = function () {
   $('.user-tracker-view').hide()
+  $('.user-tracker-btn').hide()
+  $('.user-tracker-view').html('')
+  $('.user-tracker-btn').html('')
   $('.content').show()
   $('.user-content').show()
   $('.trail-forms').show()
   $('.tracker-forms').show()
+  $('.auth-response').text('Check out our trails!')
 }
 
 const onShowImage = function (event) {
@@ -66,7 +79,8 @@ const onShowImage = function (event) {
   }
 }
 
-postAuthForms()
+loginView()
+hidePostAuthForms()
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)

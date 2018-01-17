@@ -1,6 +1,10 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+.auth-response {
+  text-align: right;
+}
+
 .auth-wrapper {
   color: #000;
 }

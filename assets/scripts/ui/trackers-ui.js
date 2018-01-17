@@ -5,9 +5,13 @@ const showUserTrails = require('../templates/display-user-content.hbs')
 const store = require('../store')
 
 const onGetTrackersSuccess = function (data) {
-  $('.user-content').html('')
-  const showTrackers = trackersIndex({ trackers: data.trackers })
-  $('.user-content').append(showTrackers)
+  if (data.trackers.length > 0) {
+    $('.user-content').html('')
+    const showTrackers = trackersIndex({ trackers: data.trackers })
+    $('.user-content').append(showTrackers)
+  } else {
+    return $('.auth-response').text('You have no trails yet!')
+  }
 }
 
 const onGetTrackersFailure = function () {
@@ -38,13 +42,22 @@ const deleteTrackerFailure = function (data) {
 }
 
 const userTrailsSuccess = function (data) {
-  const showTrails = showUserTrails({ trackers: data.trackers })
-  $('.user-tracker-btn').append(showTrails)
-  console.log('success')
+  if (data.trackers.length > 0) {
+    const showTrails = showUserTrails({ trackers: data.trackers })
+    $('.user-tracker-btn').append(showTrails)
+    $('.user-tracker-btn').show()
+    $('.user-tracker-view').html('')
+    $('.user-tracker-view').show()
+    console.log('success')
+  } else {
+    userTrailsFailure()
+  }
 }
 
 const userTrailsFailure = function (data) {
-  console.log('failure')
+  $('.user-tracker-btn').hide()
+  $('.user-tracker-view').hide()
+  $('.auth-response').text('You have no trails! Click home to return')
 }
 
 module.exports = {

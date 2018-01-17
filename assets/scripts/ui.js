@@ -13,10 +13,19 @@ const showPreAuthContent = function () {
 
 const showPostAuth = function () {
   $('.post-auth-forms').show()
+  $('.content-btn').show()
+  $('.user-button').show()
 }
 
 const hidePostAuth = function () {
   $('.post-auth-forms').hide()
+  $('.content-btn').hide()
+  $('.user-button').hide()
+  $('.content').html('')
+  $('.user-content').html('')
+  $('.user-tracker-view').html('')
+  $('.user-tracker-view').hide()
+  $('user-tracker-btn').hide()
 }
 
 // ui response
