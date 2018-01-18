@@ -4,7 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('../api/trails-api.js')
 const trackApi = require('../api/trackers-api.js')
 const ui = require('../ui/trails-ui.js')
-const trackUi = require('../ui/trails-ui.js')
+const trackUi = require('../ui/trackers-ui.js')
 
 const onGetTrails = function (event) {
   event.preventDefault()
