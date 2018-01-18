@@ -12,6 +12,7 @@ const onGetTrackersSuccess = function (data) {
     $('.trackers-response').html('Successfully retreived trackers')
   } else {
     $('.trackers-response').html('You have no trackers')
+    setTimeout(function () { $('.trackers-response').html('') }, 3000)
   }
 }
 
@@ -63,6 +64,7 @@ const userTrailsFailure = function (data) {
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').hide()
   $('.user-tracker-response').html('You have no trails!')
+  setTimeout(function () { $('.user-tracker-response').html('') }, 3000)
 }
 
 module.exports = {

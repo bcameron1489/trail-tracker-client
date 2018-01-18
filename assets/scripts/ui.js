@@ -10,6 +10,7 @@ const showHome = function () {
   $('.user-content').show()
   $('.trail-forms').show()
   $('.tracker-forms').show()
+  $('.btn').show()
   $('.auth-response').text('Check out our trails!')
 }
 
@@ -77,6 +78,7 @@ const onSignOutSuccess = function (data) {
   $('.auth-response').html('You have signed out!')
   setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.input').val('')
+  $('.btn').hide()
   showPreAuthContent()
   hidePostAuth()
 }

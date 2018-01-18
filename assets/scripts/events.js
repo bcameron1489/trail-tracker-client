@@ -53,6 +53,7 @@ const onChangePassword = function (event) {
 const loginView = function () {
   $('.content-btn').hide()
   $('.user-button').hide()
+  $('.btn').hide()
 }
 
 const hidePostAuthForms = function () {
