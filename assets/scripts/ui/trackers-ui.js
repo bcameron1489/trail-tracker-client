@@ -52,8 +52,6 @@ const userTrailsSuccess = function (data) {
     $('.user-tracker-view').html('')
     $('.user-tracker-view').show()
     $('.user-tracker-response').html('View Your Trails!')
-    $('.trackers-response').empty()
-    $('.trails-response').empty()
   } else {
     userTrailsFailure()
   }
@@ -62,7 +60,7 @@ const userTrailsSuccess = function (data) {
 const userTrailsFailure = function (data) {
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').hide()
-  $('.trackers-response').html('You have no trails! Click home to return')
+  $('.user-tracker-response').html('You have no trails! Click home to return')
 }
 
 module.exports = {

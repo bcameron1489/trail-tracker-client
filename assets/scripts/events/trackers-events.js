@@ -4,6 +4,13 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('../api/trackers-api.js')
 const ui = require('../ui/trackers-ui.js')
 
+const hideMessages = function () {
+  $('.trackers-response').html('')
+  $('.trails-response').html('')
+  $('.trackers-response').hide()
+  $('.trails-response').hide()
+}
+
 const clearContent = function () {
   $('.user-tracker-view').html('')
   $('.user-tracker-view').show()
@@ -53,6 +60,7 @@ const addTrackerHandlers = () => {
   $('#user-trackers').on('submit', onTrackerIndex)
   $('.user-content').on('submit', '.patch-trail', onUpdateTrail)
   $('.user-content').on('submit', '.delete-tracker', onDeleteTracker)
+  $('.trail-btn').on('click', hideMessages)
   $('.trail-btn').on('click', userTrailsView)
 }
 
