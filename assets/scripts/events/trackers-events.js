@@ -11,6 +11,7 @@ const clearContent = function () {
   $('.user-content').hide()
   $('.trail-forms').hide()
   $('.tracker-forms').hide()
+  $('.auth-response').html('Trail Maps')
 }
 
 const onTrackerIndex = function (event) {
