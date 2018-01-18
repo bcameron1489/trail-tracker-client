@@ -91,8 +91,6 @@ const onShowImage = function (event) {
   } else if ($(event.target).attr('data-mountain') === 'Vail') {
     $('.user-tracker-view').html('')
     $('.user-tracker-view').append(vail)
-  } else {
-    $('.user-tracker-view').html('Whoops... Trail not found')
   }
 }
 
