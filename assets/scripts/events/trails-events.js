@@ -24,23 +24,13 @@ const onPostTrail = function (event) {
     .catch(ui.postTrailFailure)
 }
 
-// const onDeleteTrail = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(this)
-//   api.deleteTrail(data)
-//     .then(ui.success)
-//     .catch(ui.failure)
-// }
-
 const addTrailHandlers = () => {
   $('#get-trails').on('submit', onGetTrails)
   $('.content').on('submit', '.create-tracker', onPostTrail)
-  // $('.content').on('submit', '.delete-trail', onDeleteTrail)
 }
 
 module.exports = {
   onGetTrails,
   onPostTrail,
-  // onDeleteTrail,
   addTrailHandlers
 }

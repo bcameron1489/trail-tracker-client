@@ -24,19 +24,9 @@ const postTrailFailure = function (data) {
   $('.trails-response').html('Failed to add trail')
 }
 
-// const success = function () {
-//   console.log('Get out of here')
-// }
-//
-// const failure = function () {
-//   console.log('damn it')
-// }
-
 module.exports = {
   onGetTrailsSuccess,
   onGetTrailsFailure,
   postTrailSuccess,
   postTrailFailure
-  // success,
-  // failure
 }
