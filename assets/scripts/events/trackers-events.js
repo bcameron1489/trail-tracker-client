@@ -23,7 +23,6 @@ const onTrackerIndex = function (event) {
 const onUpdateTrail = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log(data)
   api.updateTrail(data)
     .then(ui.updateTrailSuccess)
     .then(api.trackerIndex)

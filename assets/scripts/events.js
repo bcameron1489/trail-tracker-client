@@ -83,7 +83,7 @@ const onShowImage = function (event) {
     $('.user-tracker-view').html('')
     $('.user-tracker-view').append(vail)
   } else {
-    console.log('failed or nadda')
+    $('.user-tracker-view').html('Whoops... Trail not found')
   }
 }
 
