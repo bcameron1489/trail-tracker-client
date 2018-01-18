@@ -14,6 +14,7 @@
     <body>
       <header>
         <nav class="navbar navbar-dark bg-primary container-fluid">
+
           <!-- Navbar content -->
           <div class='auth-wrapper'>
             <form id="sign-up" class="auth-forms">
@@ -55,18 +56,29 @@
         </nav>
       </header>
       </br>
-      <div class="trails-response">
-      </div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-4 content-btn">
+          <div class="col-xs-5 content-btn">
+            <div class="trails-response">
+            </div>
+          </div>
+          <div class="col-xs-5 user-button">
+              <div class="trackers-response">
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-5 content-btn">
             <form id="get-trails" class="trail-forms">
               <fieldset>
                 <input type="hidden" name="submit" value="show trails">
               </fieldset>
             </form>
             </div>
-          <div class="col-xs-4 user-button">
+          <div class="col-xs-5 user-button">
             <form id="user-trackers" class="tracker-forms">
               <fieldset>
                 <input type="hidden" name="submit" value="get your trackers">
@@ -78,9 +90,9 @@
       <!-- display trails / user trackers lists -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-4 content">
+        <div class="col-xs-5 content">
           </div>
-          <div class="col-xs-4 user-content">
+          <div class="col-xs-5 user-content">
           </div>
         </div>
       </div>

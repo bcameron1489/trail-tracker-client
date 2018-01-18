@@ -9,20 +9,20 @@ const onGetTrackersSuccess = function (data) {
   $('.user-content').empty()
   $('.user-content').append(showTrackers)
   if (data.trackers.length > 0) {
-    $('.trails-response').html('Successfully retreived trackers')
+    $('.trackers-response').html('Successfully retreived trackers')
   } else {
-    $('.trails-response').html('You have no trackers')
+    $('.trackers-response').html('You have no trackers')
   }
 }
 
 const onGetTrackersFailure = function () {
-  $('.trails-response').html('Failed to retreive your trails')
+  $('.trackers-response').html('Failed to retreive your trails')
 }
 
 const updateTrailSuccess = function (data) {
   $('.input').val('')
   $('.user-content').html('')
-  $('.trails-response').html('Trail updated!')
+  $('.trackers-response').html('Trail updated!')
   const showTrackers = trackersIndex({ trackers: data.trackers })
   $('.user-content').append(showTrackers)
   store.tracker = data.tracker
@@ -30,18 +30,18 @@ const updateTrailSuccess = function (data) {
 }
 
 const updateTrailFailure = function (data) {
-  $('.trails-response').html('Failed to update trail!')
+  $('.trackers-response').html('Failed to update trail!')
   $('.input').val('')
   store.tracker = data.tracker
 }
 
 const deleteTrackerSuccess = function (data) {
-  $('.trails-response').html('Successfuly removed trail!')
+  $('.trackers-response').html('Successfuly removed trail!')
   $('.user.content').html('')
 }
 
 const deleteTrackerFailure = function (data) {
-  $('.trails-response').html('Failed to remove trail!')
+  $('.trackers-response').html('Failed to remove trail!')
 }
 
 const userTrailsSuccess = function (data) {
@@ -51,7 +51,7 @@ const userTrailsSuccess = function (data) {
     $('.user-tracker-btn').show()
     $('.user-tracker-view').html('')
     $('.user-tracker-view').show()
-    $('.trails-response').html('View Trails!')
+    $('.trackers-response').html('View Trails!')
   } else {
     userTrailsFailure()
   }
@@ -60,7 +60,7 @@ const userTrailsSuccess = function (data) {
 const userTrailsFailure = function (data) {
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').hide()
-  $('.trails-response').html('You have no trails! Click home to return')
+  $('.trackers-response').html('You have no trails! Click home to return')
 }
 
 module.exports = {

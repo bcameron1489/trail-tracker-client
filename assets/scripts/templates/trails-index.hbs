@@ -5,16 +5,17 @@
   <div>Mountain: {{trail.mountain}} </div>
   <div>Difficulty: {{trail.difficulty}} </div>
   <div>Rating: {{trail.rating}} </div>
-  </ul>
-
   <div class="post-trail">
      <form class="create-tracker">
        <fieldset>
-       <input class="post-button" type ="submit" name="submit" data-id="{{trail.id}}" value="Add Trail"></input>
+       <input class="btn btn-primary post-button" type ="submit" name="submit" data-id="{{trail.id}}" value="Add Trail"></input>
        <input class="id-value" name="tracker[trail_id]" value="{{trail.id}}" type="hidden"></input>
        </fieldset>
      </form>
    </div>
+  </ul>
+
+
      {{!-- <div class="delete-trail-wrapper">
       <form class="delete-trail">
         <input class="delete-button" type ="submit" name="submit" data-id="{{trail.id}}" value="Delete"></input>
