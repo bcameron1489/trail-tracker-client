@@ -7,6 +7,8 @@ const apiTrails = require('./api/trails-api.js')
 const uiTrails = require('./ui/trails-ui.js')
 const breck = require('./templates/Breck-map.hbs')
 const park = require('./templates/park-city-map.hbs')
+const big = require('./templates/big-sky-map.hbs')
+const vail = require('./templates/vail-map.hbs')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -74,6 +76,12 @@ const onShowImage = function (event) {
   } else if ($(event.target).attr('data-mountain') === 'Park City') {
     $('.user-tracker-view').html('')
     $('.user-tracker-view').append(park)
+  } else if ($(event.target).attr('data-mountain') === 'Big Sky') {
+    $('.user-tracker-view').html('')
+    $('.user-tracker-view').append(big)
+  } else if ($(event.target).attr('data-mountain') === 'Vail') {
+    $('.user-tracker-view').html('')
+    $('.user-tracker-view').append(vail)
   } else {
     console.log('failed or nadda')
   }

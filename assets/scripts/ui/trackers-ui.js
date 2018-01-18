@@ -6,7 +6,7 @@ const store = require('../store')
 
 const onGetTrackersSuccess = function (data) {
   const showTrackers = trackersIndex({ trackers: data.trackers })
-  $('.user-content').html('')
+  $('.user-content').empty()
   $('.user-content').append(showTrackers)
   if (data.trackers.length > 0) {
     $('.trails-response').html('Successfully retreived trackers')
@@ -60,7 +60,7 @@ const userTrailsSuccess = function (data) {
 const userTrailsFailure = function (data) {
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').hide()
-  $('.auth-response').text('You have no trails! Click home to return')
+  $('.trails-response').html('You have no trails! Click home to return')
 }
 
 module.exports = {

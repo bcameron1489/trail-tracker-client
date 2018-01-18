@@ -1,9 +1,10 @@
 {{#each trails as |trail|}}
 <ul class="trail-forms" data-id="{{trail.id}}">
   {{!-- <div>Id: {{trail.id}}</div> --}}
-  <div>Name: {{trail.name}}</div>
-  <div>Difficulty: {{trail.difficulty}}</div>
-  <div>Rating: {{trail.rating}}</div>
+  <div>Name: {{trail.name}} </div>
+  <div>Mountain: {{trail.mountain}} </div>
+  <div>Difficulty: {{trail.difficulty}} </div>
+  <div>Rating: {{trail.rating}} </div>
   </ul>
 
   <div class="post-trail">
@@ -13,11 +14,11 @@
        <input class="id-value" name="tracker[trail_id]" value="{{trail.id}}" type="hidden"></input>
        </fieldset>
      </form>
+   </div>
      {{!-- <div class="delete-trail-wrapper">
       <form class="delete-trail">
         <input class="delete-button" type ="submit" name="submit" data-id="{{trail.id}}" value="Delete"></input>
         <input class="id-value" name="id" value="{{trail.id}}" type="hidden"></input>
       </form>
     </div> --}}
-   </div>
 {{/each}}

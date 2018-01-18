@@ -16,8 +16,8 @@ const onGetTrailsFailure = function (data) {
 
 const postTrailSuccess = function (data) {
   $('.trails-response').html('Trail has been added!')
-  store.data = data.user
   store.tracker = data.tracker
+  store.data = data.user
 }
 
 const postTrailFailure = function (data) {
