@@ -51,7 +51,9 @@ const userTrailsSuccess = function (data) {
     $('.user-tracker-btn').show()
     $('.user-tracker-view').html('')
     $('.user-tracker-view').show()
-    $('.trackers-response').html('View Trails!')
+    $('.user-tracker-response').html('View Your Trails!')
+    $('.trackers-response').empty()
+    $('.trails-response').empty()
   } else {
     userTrailsFailure()
   }
