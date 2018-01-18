@@ -5,6 +5,8 @@ const api = require('./api')
 const ui = require('./ui')
 const apiTrails = require('./api/trails-api.js')
 const uiTrails = require('./ui/trails-ui.js')
+const apiTrackers = require('./api/trackers-api.js')
+const uiTrackers = require('./ui/trackers-ui.js')
 const breck = require('./templates/Breck-map.hbs')
 const park = require('./templates/park-city-map.hbs')
 const big = require('./templates/big-sky-map.hbs')
@@ -26,6 +28,8 @@ const onSignIn = function (event) {
     .then(apiTrails.getTrails)
     .then(uiTrails.onGetTrailsSuccess)
     .catch(ui.onSignInFailure)
+    .then(apiTrackers.trackerIndex)
+    .then(uiTrackers.onGetTrackersSuccess)
 }
 
 const onSignOut = function (event) {
