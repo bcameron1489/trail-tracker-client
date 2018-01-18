@@ -36,12 +36,14 @@ const updateTrailFailure = function (data) {
 }
 
 const deleteTrackerSuccess = function (data) {
-  $('.trackers-response').html('Successfuly removed trail!')
+  $('.delete-response').html('Trail removed!')
+  setTimeout(function () { $('.delete-response').html('') }, 3000)
   $('.user.content').html('')
 }
 
 const deleteTrackerFailure = function (data) {
   $('.trackers-response').html('Failed to remove trail!')
+  setTimeout(function () { $('.delete-response').html('') }, 3000)
 }
 
 const userTrailsSuccess = function (data) {
@@ -60,7 +62,7 @@ const userTrailsSuccess = function (data) {
 const userTrailsFailure = function (data) {
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').hide()
-  $('.user-tracker-response').html('You have no trails! Click home to return')
+  $('.user-tracker-response').html('You have no trails!')
 }
 
 module.exports = {

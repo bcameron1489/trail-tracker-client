@@ -45,11 +45,13 @@ const hidePostAuth = function () {
 // ui response
 const onSignUpSuccess = function () {
   $('.auth-response').html('Thank you for signing up!')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.signup').val('')
 }
 
 const onSignUpFailure = function () {
   $('.auth-response').html('There was a problem. Please try again.')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.signup').val('')
 }
 
@@ -58,12 +60,14 @@ const onSignInSuccess = function (data) {
   preAuthContent()
   showHome()
   $('.auth-response').html('Welcome back ' + data.user.email + '!')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.input').val('')
   store.user = data.user
 }
 
 const onSignInFailure = function (data) {
   $('.auth-response').html('Sign in failure. Please try again.')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.input').val('')
 }
 
@@ -71,6 +75,7 @@ const onSignOutSuccess = function (data) {
   $('.content').html('')
   $('.user-content').html('')
   $('.auth-response').html('You have signed out!')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.input').val('')
   showPreAuthContent()
   hidePostAuth()
@@ -78,15 +83,18 @@ const onSignOutSuccess = function (data) {
 
 const onSignOutFailure = function (data) {
   $('.auth-response').html('Sign out failure.')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
 }
 
 const onChangePasswordSuccess = function () {
   $('.auth-response').html('Password change successful!')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.input').val('')
 }
 
 const onChangePasswordFailure = function () {
   $('.auth-response').html('Failed to change password. Please try again.')
+  setTimeout(function () { $('.auth-response').html('') }, 3000)
   $('.input').val('')
 }
 
