@@ -3,6 +3,8 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const eventsTrails = require('./events/trails-events.js')
+const eventsTrackers = require('./events/trackers-events.js')
 const apiTrails = require('./api/trails-api.js')
 const uiTrails = require('./ui/trails-ui.js')
 const apiTrackers = require('./api/trackers-api.js')
@@ -62,6 +64,8 @@ const hidePostAuthForms = function () {
 // }
 
 const showHome = function () {
+  $('.trackers-response').show()
+  $('.trails-response').show()
   $('.user-tracker-view').hide()
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').html('')
@@ -70,7 +74,7 @@ const showHome = function () {
   $('.user-content').show()
   $('.trail-forms').show()
   $('.tracker-forms').show()
-  $('.auth-response').text('Check out our trails!')
+  $('.auth-response').html('Check out our trails!')
 }
 
 const onShowImage = function (event) {
@@ -100,6 +104,8 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('.home-btn').on('click', showHome)
+  $('.home-btn').on('click', eventsTrackers.onTrackerIndex)
+  $('.home-btn').on('click', eventsTrails.onGetTrails)
   $('.user-tracker-btn').click('show-button', onShowImage)
 }
 
