@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Trail-Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header>
+        <nav class="navbar navbar-dark bg-primary container-fluid">
+
+          <!-- Navbar content -->
+          <div class='auth-wrapper'>
+            <form id="sign-up" class="auth-forms">
+              <fieldset>
+                <input type="submit" name="submit" value="Sign up!">
+                <input name="credentials[email]" type="text" class="signup" placeholder="EMAIL">
+                <input name="credentials[password]" type="password" class="signup" placeholder="PASSWORD">
+                <input name="credentials[password_confirmation]" type="password" class="signup" placeholder="PASSWORD_CONFIRMATION">
+              </fieldset>
+            </form>
+            <form id="sign-in" class="auth-forms">
+              <fieldset>
+                <input type="submit" name="submit" value="Sign in! ">
+                <input name="credentials[email]" type="text" class="input" placeholder="EMAIL">
+                <input name="credentials[password]" type="password" class="input" placeholder="PASSWORD">
+              </fieldset>
+            </form>
+          </div>
+          <div class="post-auth-forms">
+            <form id="sign-out" class="post-login-auth">
+              <fieldset>
+                <input type="submit" name="submit" value="Sign out!">
+              </fieldset>
+            </form>
+            <form id="change-password" class="post-login-auth">
+              <fieldset>
+                <input type="submit" name="submit" value="Change Password!">
+                <input type="text" name="passwords[old]" class="input" placeholder="Old Password">
+                <input type="password" name="passwords[new]" class="input" placeholder="New Password">
+              </fieldset>
+            </form>
+          </div>
+          <form class="form-inline">
+            <button class="btn btn-outline-success view-btn home-btn" type="button">Home</button>
+            <button class="btn btn-outline-success view-btn trail-btn" type="button">Trails</button>
+          </form>
+          <div class="auth-response">
+          </div>
+        </nav>
+      </header>
+      </br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-5 content-btn">
+            <div class="trails-response">
+            </div>
+          </div>
+          <div class="col-xs-5 user-button">
+              <div class="delete-response">
+              </div>
+            </br>
+              <div class="trackers-response">
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-5 content-btn">
+            <form id="get-trails" class="trail-forms">
+              <fieldset>
+                <input type="hidden" name="submit" value="show trails">
+              </fieldset>
+            </form>
+            </div>
+          <div class="col-xs-5 user-button">
+            <form id="user-trackers" class="tracker-forms">
+              <fieldset>
+                <input type="hidden" name="submit" value="get your trackers">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- display trails / user trackers lists -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-5 content">
+          </div>
+          <div class="col-xs-5 user-content">
+          </div>
+        </div>
+      </div>
+
+      <!-- ^^^ -->
+      <div class="home-content">
+      </div>
+      <div class="user-tracker-response">
+      </div>
+      <div class="user-tracker-btn">
+      </div>
+      <div class="user-tracker-view">
+      </div>
+    </body>
+</html>
