@@ -61,6 +61,7 @@ const userTrailsSuccess = function (data) {
     $('.user-tracker-view').html('')
     $('.user-tracker-view').show()
     $('.user-tracker-response').html('View Your Trails!')
+    setTimeout(function () { $('.user-tracker-response').html('') }, 3000)
   } else {
     userTrailsFailure()
   }

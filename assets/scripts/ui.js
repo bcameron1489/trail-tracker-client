@@ -77,6 +77,7 @@ const onSignOutSuccess = function (data) {
   $('.user-content').html('')
   $('.auth-response').html('You have signed out!')
   setTimeout(function () { $('.auth-response').html('') }, 3000)
+  $('.user-tracker-response').html('')
   $('.input').val('')
   $('.btn').hide()
   showPreAuthContent()

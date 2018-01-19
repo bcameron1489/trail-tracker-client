@@ -67,6 +67,8 @@ const hidePostAuthForms = function () {
 const showHome = function () {
   $('.trackers-response').show()
   $('.trails-response').show()
+  $('.delete-response').html('')
+  $('.delete-response').show()
   $('.user-tracker-view').hide()
   $('.user-tracker-btn').hide()
   $('.user-tracker-view').html('')

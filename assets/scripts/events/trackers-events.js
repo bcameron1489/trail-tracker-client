@@ -7,8 +7,10 @@ const ui = require('../ui/trackers-ui.js')
 const hideMessages = function () {
   $('.trackers-response').html('')
   $('.trails-response').html('')
+  $('.delete-response').html('')
   $('.trackers-response').hide()
   $('.trails-response').hide()
+  $('.delete-response').hide()
 }
 
 const clearContent = function () {
