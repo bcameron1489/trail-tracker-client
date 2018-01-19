@@ -13,13 +13,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 100px;
 }
 
-.breck-img {
-  margin: 100px;
+body .navbar {
+  border-radius: 0px;
 }
 
-img {
-  height: 870px;
-  width: 1619px;
+.breck-img {
+  margin: 100px;
 }
 
 .content {
@@ -29,15 +28,16 @@ img {
   width: 49%;
 }
 
-body .navbar {
-  border-radius: 0px;
-}
-
 .content-btn {
   float: left;
   margin: 5px;
   padding: 5px;
   width: 49%;
+}
+
+img {
+  height: 870px;
+  width: 1619px;
 }
 
 .park-img {
@@ -46,6 +46,15 @@ body .navbar {
 
 .post-auth-forms {
   color: #000;
+}
+
+.trackers-response {
+  display: inline;
+}
+
+.trails-response {
+  display: inline;
+  margin-bottom: 10px;
 }
 
 .user-btn {
@@ -60,30 +69,21 @@ body .navbar {
   right: auto;
 }
 
-.user-trails-hbs {
-  margin: auto;
+.user-tracker-response {
+  margin-left: 40px;
+  padding: 5px;
   text-align: center;
-}
-
-.trails-response {
-  display: inline;
-  margin-bottom: 10px;
-}
-
-.trackers-response {
-  display: inline;
-}
-
-.vail-img {
-  margin: 100px;
 }
 
 .user-tracker-view {
   text-align: center;
 }
 
-.user-tracker-response {
-  margin-left: 40px;
-  padding: 5px;
+.user-trails-hbs {
+  margin: auto;
   text-align: center;
+}
+
+.vail-img {
+  margin: 100px;
 }
