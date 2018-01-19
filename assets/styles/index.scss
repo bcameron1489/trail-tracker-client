@@ -1,20 +1,27 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+$black: #000;
+$backrnd: #cec38e;
+
 .auth-response {
   text-align: right;
 }
 
 .auth-wrapper {
-  color: #000;
+  color: $black;
 }
 
 .big-sky-img {
   margin: 100px;
 }
 
+body {
+  background-color: $backrnd;
+}
+
 body .navbar {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .breck-img {
@@ -45,7 +52,7 @@ img {
 }
 
 .post-auth-forms {
-  color: #000;
+  color: $black;
 }
 
 .trackers-response {
