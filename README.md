@@ -20,7 +20,7 @@ Technologies used: Javascript, Handlebars, Bootstrap, Sass, HTML5, AJAX, jQuery
 ### What is this App?
   I've created a single page application that provides a user access to a database of trails.  The app currently allows a user to save a trail, mark it as completed and view the trails cooresponding mountain trail map.
 
-###How does it work?
+### How does it work?
   A user must first sign up and sign in before accessing the sites content.  Upon sign in, the user is given our list of trails which they can add to their saved list.  A user has the ability to add and delete trails to and from their list.  Additionally they can update the complete field through a text form.  Finally, the user has access to a "trails" view where they're given access to their personal list of trails and can choose to render an HD trail map.
 
 The client is built primarily with javascript, jquery and handlebars while using ajax to comunicate with my rails api.
