@@ -21,17 +21,23 @@ const onGetTrackersFailure = function () {
 }
 
 const updateTrailSuccess = function (data) {
-  $('.input').val('')
-  $('.user-content').html('')
-  $('.trackers-response').html('Trail updated!')
-  const showTrackers = trackersIndex({ trackers: data.trackers })
-  $('.user-content').append(showTrackers)
-  store.tracker = data.tracker
-  store.data = data.user
+  if ($('.clear-update-input').val() === '') {
+    return $('.delete-response').html('Required field was empty')
+  } else {
+    $('.clear-update-input').val('')
+    $('.user-content').html('')
+    $('.delete-response').html('Trail updated!')
+    setTimeout(function () { $('.delete-response').html('') }, 3000)
+    const showTrackers = trackersIndex({ trackers: data.trackers })
+    $('.user-content').append(showTrackers)
+    store.tracker = data.tracker
+    store.data = data.user
+  }
 }
 
 const updateTrailFailure = function (data) {
-  $('.trackers-response').html('Failed to update trail!')
+  $('.delete-response').html('Failed to update trail!')
+  setTimeout(function () { $('.delete-response').html('') }, 3000)
   $('.input').val('')
   store.tracker = data.tracker
 }
