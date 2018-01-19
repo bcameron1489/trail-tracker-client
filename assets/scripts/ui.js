@@ -30,6 +30,10 @@ const showPostAuth = function () {
   $('.user-button').show()
   $('.content').show()
   $('.user-content').show()
+  $('.trails-response').show()
+  $('.trackers-response').show()
+  $('.delete-response').html('')
+  $('.delete-response').show()
 }
 
 const hidePostAuth = function () {
